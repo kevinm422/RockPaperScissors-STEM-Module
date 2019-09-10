@@ -60,14 +60,27 @@ public class AI extends Player {
 			if(gameNumber() < 900) {
 				return cyclePlay();
 			}
-			for(int i = 0; i < gameNumber()-3; i++) {
-				if(getTheirMove(i).equals(getTheirMove(gameNumber()-2))) {
-					if(getMyMove(i).equals(getMyMove(gameNumber()-2))) {
-						if(getTheirMove(i+1).equals(getTheirMove(gameNumber()-1))) {
-							if(getMyMove(i+1).equals(getMyMove(gameNumber()-1))) {
-								if(getTheirMove(i+2).equals(getTheirMove(gameNumber()))) {
-									if(getMyMove(i+2).equals(getMyMove(gameNumber()))) {
-										return cyclePlay(getTheirMove(i+3));
+
+			if(myWinPercentage(400,500) > 50) {
+				return cyclePlay(cyclePlay());
+			} else if(myWinPercentage(0,100) > 50) {
+				if(wonLastGame()) {
+					return myLastPlay();
+				} else {
+					return cyclePlay(cyclePlay());
+				}
+			} else if(myWinPercentage(800,900) > 50) {
+				return cyclePlay();
+			} else {
+				for(int i = 0; i < gameNumber()-3; i++) {
+					if(getTheirMove(i).equals(getTheirMove(gameNumber()-2))) {
+						if(getMyMove(i).equals(getMyMove(gameNumber()-2))) {
+							if(getTheirMove(i+1).equals(getTheirMove(gameNumber()-1))) {
+								if(getMyMove(i+1).equals(getMyMove(gameNumber()-1))) {
+									if(getTheirMove(i+2).equals(getTheirMove(gameNumber()))) {
+										if(getMyMove(i+2).equals(getMyMove(gameNumber()))) {
+											return cyclePlay(getTheirMove(i+3));
+										}
 									}
 								}
 							}
