@@ -1,0 +1,30 @@
+# LeftColumn
+0xD5AD36
+# RightColumn
+0x1B73D3
+# PlayerScoreText
+0x000000
+# TieColor
+0xFFFFFF
+# BarGraphLabelText
+0xFFFFFF
+# Won
+0x00f000
+# Tied
+0xFFFF00
+# Lost
+0xFF0000
+# Compiled
+0x008000
+# Modified
+0xFFFF00
+# FailedCompile
+0xFF0000
+# ButtonText
+0xC0C0C0
+# Dark
+0x999999
+# ButtonBackground
+0x1B73D3
+# CenterColumnBackground
+0x000080
