@@ -2,10 +2,6 @@
 
 This STEM module teaches Java programming to students. Students implement a strategy to beat an opponent in a head-to-head, best of 10,000 Rock Paper Scissors game. The module ends with a bracket style tournament pitting each team's Java code against one another to decide the Rock Paper Scissors Champion!
 
-## Installation
-
-Download Student.jar and Instructor.jar.
-
 ## Usage
 
 ```bash
